@@ -17,7 +17,7 @@ const Home = ({breakpoint}: Props) => {
             <Header breakpoint={breakpoint}/>
             <div className='content'>
                 <div className='home'>
-                    <h1 className='secondary-labe'>Welcome!</h1>
+                    <h1 className='secondary-label'>Welcome!</h1>
                     <p className='text'>
                         
                         <br />

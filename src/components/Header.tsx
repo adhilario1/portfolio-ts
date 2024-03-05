@@ -18,9 +18,9 @@ const Header = ({breakpoint}: Props) => {
             <div className='header mobile'>
                 <div className='mobile-container'>
                     <a className='title primary-label'><h1>Adam Hilario</h1></a>
-                    <SideBar>
+                    <SideBar />
                         
-                    </SideBar>
+                    
                 </div>
             </ div>
         )

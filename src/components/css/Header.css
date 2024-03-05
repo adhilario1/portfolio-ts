@@ -13,11 +13,12 @@
     color: antiquewhite;
     width: 100vw;
     text-align: center;
+    min-height: 80px;
 }
 
 .mobile {
     flex-direction: row;
-    justify-content: space-between;
+    
     padding: 1.5vh;
     font-size: medium;
     height: 7vh;
@@ -26,7 +27,7 @@
 
 .mobile-container {
     display: flex;
-    justify-content: space-between;
+    
 }
 
 .title {
