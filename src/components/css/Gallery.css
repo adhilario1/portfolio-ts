@@ -1,5 +1,4 @@
 .dropdown {
-    display: block;
     background: transparent;
     color:antiquewhite;
     border: 2px solid antiquewhite;
@@ -24,6 +23,21 @@
     display: flex;
 }
 
-.viewport-container ul{
-    list-style-type: none;
+.viewport-container {
+    display: block;
+    width: 100%;
+    
 }
+
+.viewport-container ul{
+    display: block;
+    list-style-type: none;
+    
+    text-align: center;
+    
+}
+
+.viewport-container li{
+    display: inline-block;
+}
+
