@@ -149,13 +149,8 @@ const Gallery = () => {
                         <ul>
                             {filteredData.map((item) => (
                                 <>
-                                
                                 <li key={item.id}>
                                     <Modal className="Modal" post={item} />
-                                        
-                                            
-                                        
-                                    
                                 </li>
                                 </>
                             ))}

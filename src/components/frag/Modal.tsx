@@ -44,7 +44,7 @@ const Modal = ({className, post, breakpoint}: Props) => {
             
         } else if (type==="yt") {
             //setYT(true);
-            return (<iframe className={`video ${t_bool}`} src={post?.url}></iframe>);
+            return (<iframe className={`video ${t_bool}`} width="560" height="315" src={post?.url} title="YouTube video player" /*frameborder="0"*/ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>);
         } else if (type==="video"){
             var fileExt = post?.url.split('.').pop();
             //setVideo(true);
@@ -62,6 +62,7 @@ const Modal = ({className, post, breakpoint}: Props) => {
         <>
         <div className={`open-modal ${className}`} onClick={toggleModal}> 
             {contentType(true, post?.type)}
+            <div className="cover"></div>
         </div>
         {modal && (
             <div className="modal-container">

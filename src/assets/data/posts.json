@@ -25,5 +25,14 @@
         "year": 2022,
         "description": "this is the third test image",
         "discipline": "graphic-design"
+    },
+    {
+        "id": 1,
+        "title": "Dancer - IDLES",
+        "type": "yt",
+        "url": "https://www.youtube.com/embed/A3ZZj5y6Qt4?si=x8uXlTWhooH6aKfK",
+        "year": 2024,
+        "description": "testing youtube video",
+        "discipline":"3d-modelling"
     }
 ]
