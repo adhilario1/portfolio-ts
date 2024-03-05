@@ -58,7 +58,7 @@ const SideBar = () => {
                     </Link>
                 </li>
             {linktree.map((link) => (
-                <li className="list-item">
+                <li className="side-item">
                     <Link to={link.url}>{link.label}</Link>
                 </li>
             ))}
