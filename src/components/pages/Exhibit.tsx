@@ -3,11 +3,15 @@ import { useParams } from 'react-router-dom';
 
 import Header from '../Header';
 
-const Exhibit = () => {
+interface Props {
+    breakpoint?: number;
+}
+
+const Exhibit = ({breakpoint}: Props) => {
     const {exhibitID} = useParams()
     return (
         <>
-        <Header />
+        <Header breakpoint={breakpoint}/>
         <div className='content'>
             <p>{exhibitID}</p>
         </div>

@@ -12,7 +12,6 @@ interface Props {
 }
 
 const Modal = ({className, post, breakpoint}: Props) => {
-
     const [modal, setModal] = useState(false);
     const toggleModal = () => {
         setModal(!modal);
@@ -26,11 +25,15 @@ const Modal = ({className, post, breakpoint}: Props) => {
     }
 
     const {height, width} = useWindowDimensions();
+    //const [mobile, setMobile] = useState(false);
 
     var modalClassname = "modal-content";
+    var mobile = false;
     if (breakpoint && (height && width < breakpoint )) {
         modalClassname="modal-content-fullscreen";
+        mobile = true;
     }
+    console.log(breakpoint);
     
     
     
@@ -44,7 +47,7 @@ const Modal = ({className, post, breakpoint}: Props) => {
             
         } else if (type==="yt") {
             //setYT(true);
-            return (<iframe className={`video ${t_bool}`} width="auto" height="auto" src={post?.url} title="YouTube video player" /*frameborder="0"*/ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>);
+            return (<iframe className={`video ${t_bool}`} width="560" height="315" src={post?.url} title="YouTube video player" /*frameborder="0"*/ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>);
         } else if (type==="video"){
             var fileExt = post?.url.split('.').pop();
             //setVideo(true);
@@ -57,13 +60,36 @@ const Modal = ({className, post, breakpoint}: Props) => {
         else return(<></>)
     }
 
-
     return (
         <>
-        <div className={`open-modal ${className}`} onClick={toggleModal}> 
+        {!mobile && (
+            <div className={`open-modal ${className}`} onClick={toggleModal}> 
             {contentType(true, post?.type)}
             <div className="cover"></div>
         </div>
+        )}
+        {mobile && (
+            <>
+            <div className={`open-modal ${className}`} onClick={toggleModal}>
+                <div>
+                    {contentType(true, post?.type)}
+                </div>
+                <div className="meta-data">
+                    <div>
+                        <h2 className="secondary-label">{post?.title}</h2>
+                        <h3><i>{post?.discipline} | {post?.project} {post?.year}</i></h3>
+                    </div>
+                    <div className="description text">
+                        <p>
+                            {post?.description}
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            </>
+        )
+        }
         {modal && (
             <div className="modal-container">
                 <div onClick={toggleModal} className="overlay" />

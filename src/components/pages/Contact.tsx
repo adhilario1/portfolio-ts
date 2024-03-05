@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from '../Header';
 
-const Contact = () => {
+interface Props {
+    breakpoint?: number;
+}
+
+const Contact = ({breakpoint}: Props) => {
     return (
         <>
-        <Header />
+        <Header breakpoint={breakpoint}/>
         <div className='content'>
             
         </div>

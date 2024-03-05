@@ -7,7 +7,7 @@ import './css/Footer.css';
 const breakpoint = 685;
 const Footer = () => {
     const {height, width } = useWindowDimensions();
-    console.log(height);
+    
 
     var device;
     if (height && width < breakpoint) {

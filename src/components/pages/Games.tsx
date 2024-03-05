@@ -1,10 +1,14 @@
 import React from "react";
 import Header from '../Header';
 
-const Games = () => {
+interface Props {
+    breakpoint?: number;
+}
+
+const Games = ({breakpoint}: Props) => {
     return (
         <>
-        <Header />
+        <Header breakpoint={breakpoint}/>
         <div className="content games">
             games
         </div>

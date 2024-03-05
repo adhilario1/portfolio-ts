@@ -1,10 +1,15 @@
 import React from "react";
 import Header from "../Header";
 import '../css/About.css'
-const About = () => {
+
+interface Props {
+    breakpoint?: number;
+}
+
+const About = ({breakpoint}: Props) => {
     return (
         <>
-        <Header />
+        <Header breakpoint={breakpoint}/>
         <div className="content about">
             <h1 className="secondary-label">about.</h1>
             <div>

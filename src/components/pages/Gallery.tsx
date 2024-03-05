@@ -10,8 +10,11 @@ import Modal from '../frag/Modal';
 //data 
 import posts from './../../assets/data/posts.json'
 
+interface Props {
+    breakpoint?: number;
+}
 
-const Gallery = () => {
+const Gallery = ({breakpoint}: Props) => {
     const [sortKey, setSortKey] = useState('');
     const [filter, setFilter] = useState('');
     const [filteredData, setFilteredData] = useState(posts);
@@ -119,9 +122,10 @@ const Gallery = () => {
         );
         setFilteredData(sortedData);
     };
+
     return (
         <div>
-            <Header />        
+            <Header breakpoint={breakpoint}/>        
             <div className='content'>
                 <div className='gallery'>
                     <div className='subheader'>
@@ -146,15 +150,17 @@ const Gallery = () => {
                     </div>
                     
                     <div className='viewport-container'>
+                        <div className='spacer' />
                         <ul>
                             {filteredData.map((item) => (
                                 <>
                                 <li key={item.id}>
-                                    <Modal className="Modal" post={item} />
+                                    <Modal className="Modal" post={item} breakpoint={breakpoint} />
                                 </li>
                                 </>
                             ))}
                         </ul>
+                        <div className='spacer' />
                     </div>
                 </div>
             </div>    

@@ -27,6 +27,7 @@ import Games from './components/pages/Games';
 import About from './components/pages/About';
 import Guestbook from './components/pages/GuestBook';
 import Contact from './components/pages/Contact';
+import AdminLogin from './components/pages/AdminLogin';
 
 const breakpoint=685;
 function App() {
@@ -44,31 +45,35 @@ function App() {
       <Routes>
         <Route 
           path='/'
-          element={<Body><Home /></Body>}
+          element={<Body><Home breakpoint={breakpoint} /></Body>}
         />
         <Route 
           path="/gallery"
-          element={<Body><Gallery /></Body>}
+          element={<Body><Gallery breakpoint={breakpoint}/></Body>}
         />                
         <Route          
           path="/gallery/:exhibitID"
-          element={<Body><Exhibit /></ Body>} 
+          element={<Body><Exhibit breakpoint={breakpoint}/></ Body>} 
         />
         <Route          
           path="/games"
-          element={<Body><Games /></Body>}
+          element={<Body><Games breakpoint={breakpoint} /></Body>}
         />              
         <Route
           path='/about'
-            element={<Body><About /></Body>}
+            element={<Body><About breakpoint={breakpoint}/></Body>}
         />
         <Route  
           path="/guestbook"
-          element={<Body><Guestbook /></Body>}
+          element={<Body><Guestbook breakpoint={breakpoint}/></Body>}
         />
         <Route     
           path="/contact/email"
-          element={<Body><Contact /></Body>}
+          element={<Body><Contact breakpoint={breakpoint}/></Body>}
+        />
+        <Route
+          path='/admin'
+          element={<Body><AdminLogin /></Body>} 
         />
         <Route 
           path="*"

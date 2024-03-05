@@ -5,13 +5,13 @@ import NavLinks from "./frag/NavLinks";
 import NavBar from "./frag/NavBar";
 
 import './css/Header.css'
+
 interface Props {
     breakpoint?: number
 }
 
 const Header = ({breakpoint}: Props) => {
     const {height, width } = useWindowDimensions();
-    console.log(height);
 
     if (breakpoint && (height && width < breakpoint)) {
         return (
@@ -19,7 +19,7 @@ const Header = ({breakpoint}: Props) => {
                 <div className='mobile-container'>
                     <a className='title primary-label'><h1>Adam Hilario</h1></a>
                     <SideBar>
-                        <NavLinks />
+                        
                     </SideBar>
                 </div>
             </ div>

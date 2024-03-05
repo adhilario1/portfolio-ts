@@ -1,30 +1,20 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom'
+
 import Header from '../Header';
 
-
-import {Post} from '../../models/Post';
 //style
 import '../css/Home.css'
-import Modal from '../frag/Modal';
 
-const testPost: Post = {
-    id: 1,
-    title: "this is a test",
-    type: "image", 
-    
-    url: "/assets/images/test-img-3.jpg",
-    year: 2024,
-    description: "this is a place holder",
-    discipline: "web-dev"
+interface Props {
+    breakpoint?: number;
 }
 
-const Home = () => {
+const Home = ({breakpoint}: Props) => {
     
     return (
         <>
-            <Header />
+            <Header breakpoint={breakpoint}/>
             <div className='content'>
                 <div className='home'>
                     <h1 className='secondary-labe'>Welcome!</h1>
@@ -36,7 +26,7 @@ const Home = () => {
                         <br />
                         <div style={{display: 'inline'}}>If you&apos;d like to learn more about this website, <Link className="link-box" to="/gallery/web-dev"><div className='link-indicator'>[</div><div className='link-text'>click here.</div><div className='link-indicator'>]</div></Link></div>
                     </p>
-                    <Modal post={testPost}/>
+    
 
                 </div>
             </div>

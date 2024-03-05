@@ -44,12 +44,15 @@
 
 .open-modal{
     display: block;
+    float: left;
     position: relative;
     min-width: 240px;
-    max-width: 30vw;
+    min-height: 240px;
+    max-width: 300px;
+    max-height: 300px;
     width: auto;
     height: auto;
-    padding: 10px;
+    
     margin: 5px;
     border: 3px solid antiquewhite;
     border-radius: 3px;
@@ -57,28 +60,63 @@
     cursor: pointer;
 
     object-fit: cover;
+    overflow: hidden;
 }
 
 .open-modal:hover {
-    background: antiquewhite;
+    background-color: antiquewhite;
     color: #101010;
 }
 
 .open-modal img{
-    display: block;
-    max-width: 230px;
-    width:auto;
-    height: auto;
+    
+    height: 300px;
+    width: 300px;
     object-fit: cover;
 }
 
 .open-modal iframe{
-    display: block;
-    max-width: 230px;
-    width:auto;
-    height: auto;
-    object-fit: cover;
+   border: none;
 }
+
+
+@media only screen and (max-width:750px) {
+    .open-modal img {
+        height: 240px;
+        width: 240px;
+    }
+
+    .open-modal .video {
+        height: 240px;
+        width: 240px;
+    }
+}
+@media only screen and (max-width: 850) and (min-width: 751) { 
+    .open-modal img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .open-modal .video {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1113px) and (min-width:851px) {
+    .open-modal img {
+        height: 240px;
+        width: 240px;
+    }
+
+    .open-modal .video {
+        height: 240px;
+        width: 240px;
+    }
+
+    
+}
+
 
 
 .modal-content {
@@ -101,15 +139,23 @@
     overflow: hidden;
 }
 
+
 @media only screen and (max-width: 685px) {
+    .description {
+        height: 100%;
+        padding-top: 5px;
+
+        text-overflow: ellipsis;
+    }
+
+    .meta-data {
+        width:100%;
+        height:100%;
+        padding: 0 3%;
+        text-align: left;
+    }
+
     .modal-content {
-        /*
-        position: absolute;
-        width: 99vw;
-        height: 99vh;
-        top: 50vh;
-        left:50vw;
-        8*/
         position: absolute;
         z-index: 101;
         min-width: 0;
@@ -130,4 +176,34 @@
 
         overflow:-moz-hidden-unscrollable;
     }
+
+    .open-modal {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        min-height: none;
+        max-width: none;
+        width:100%;
+        height:100%;
+        border:none;
+    }
+
+    .open-modal img{
+        height:100%;
+    }
+
+    .open-modal iframe {
+        border: none;
+        max-height: none;
+        height: 100%;
+    }
+
+    .secondary-label {
+        width: 100%;
+        border-bottom: 1px solid #aaa;
+    }
+    .secondary-label:hover {
+        border-bottom: 1px solid #101010;
+    }
 }
+
