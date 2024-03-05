@@ -16,8 +16,11 @@ const Header = ({breakpoint}: Props) => {
     if (breakpoint && (height && width < breakpoint)) {
         return (
             <div className='header mobile'>
-                <div className='mobile-container'>
-                    <a className='title primary-label'><h1>Adam Hilario</h1></a>
+                <div className='container mobile-container'>
+                    <div className="title primary-label">
+                    <a href="/" ><h1>Adam Hilario</h1></a>
+                    </div>
+                    
                     <SideBar />
                         
                     
