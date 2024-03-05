@@ -1,0 +1,26 @@
+
+.gallery {
+    width: 100%;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.subheader {
+    width: 100%;
+    display: flex;
+}
+
+.dropdown {
+    display: block;
+    background: transparent;
+    color:antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 3px;
+}
+
+.dropdown option {
+    background-color: #101010;
+    border: 2px solid antiquewhite;
+}

@@ -1,0 +1,8 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #ffbf00;
+    border-bottom: 1px solid #ffbf00;
+    margin: 1em;
+}
+

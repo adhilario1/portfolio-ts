@@ -1,0 +1,68 @@
+.footer {
+    display: flex;
+    background-color: #101010;
+    color: antiquewhite/*#ffbf00*/;
+    width: 100vw;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 2pt double #ffbf00;
+
+}
+
+.label {
+    font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.list-body ul{
+    list-style-type: none;
+}
+
+.list-container{
+    padding: 1em;
+}
+
+.list-item {
+    display: flex;
+    width: 10em;
+    justify-content: left;
+    align-content: center;
+}
+
+.list-item:hover {
+    
+    background-color: #ffbf00;
+    color: #101010;
+}
+
+.list-item:hover .list-item-indicator{
+    visibility: visible;
+}
+
+.list-item a{
+    display: flex;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.list-item-indicator {
+    visibility: hidden;
+    padding: 0;
+}
+
+.list-title{
+    font-weight: bolder;
+}
+
+.-f--mobile {
+    position:static;
+    z-index: 0;
+    border: none;
+    margin-top: -1vh;
+}
+
+.-f--web {
+    margin-top: 5vh;
+}
