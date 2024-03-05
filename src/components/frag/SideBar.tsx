@@ -45,11 +45,12 @@ const SideBar = () => {
     return (
         <>
         <div className="open-side">
-            <a className="menu-bars"onClick={toggleSideBar} >
+            <Link to="#" className="menu-bars"onClick={toggleSideBar} >
                 <FaIcons.FaBars onClick={toggleSideBar} />
-            </a>
+            </Link>
         </div>
-        <nav className={sideBar? 'sidebar-main active' : 'sidebar-main'}>
+        {sideBar && (
+            <nav className="sidebar-main">
             <ul className="" onClick={toggleSideBar}>
                 <li className="sidebar-toggle">
                     <Link to='#' className="menu-bars">
@@ -63,6 +64,8 @@ const SideBar = () => {
             ))}
             </ul>
         </nav>
+        )}
+        
         </>
     )
 }
