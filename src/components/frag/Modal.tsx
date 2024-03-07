@@ -40,10 +40,10 @@ const Modal = ({className, post, breakpoint}: Props) => {
     function contentType(thumbnail: boolean = false, type: string | undefined):ReactElement {
         var t_bool = thumbnail? "thumbnail" : "";
 
-        if (type===undefined) return (<></>)
+        if (type===undefined || type==="") return (<></>)
         if (type==="image") {
             //setImage(true);
-            return (<img className={`image ${t_bool}`} src={post?.url}></img>);
+            return (<img className={`image ${t_bool}`} src={post?.url} alt="/assets/images/default.jpg"></img>);
             
         } else if (type==="yt") {
             //setYT(true);
@@ -101,6 +101,9 @@ const Modal = ({className, post, breakpoint}: Props) => {
                     <div className="viewport-body">
                         {contentType(false, post?.type)}
                         
+                    </div>
+                    <div>
+                        {post?.year} {post?.discipline} {post?.project}
                     </div>
                     <div className="description">
                         {post?.description}

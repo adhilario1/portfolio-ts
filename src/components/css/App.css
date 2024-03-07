@@ -52,7 +52,7 @@
   min-height: 75vh;
   padding: 1em;
   border-radius: 5px;
-  border: 2pt double #ffbf00;
+  border: 2pt double #ff8b00;
   background-color: #101010;
   color: antiquewhite;
   overflow-y: hidden;
@@ -68,6 +68,10 @@
   padding: calc(150px + 2vmin) 5% 0;
 }
 
+.formatted-text {
+  tab-size: 2;
+  
+}
 .primary-label {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;

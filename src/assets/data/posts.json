@@ -18,7 +18,7 @@
         "discipline": "web-dev"
     },
     {
-        "id": 1,
+        "id": 2,
         "title": "Test Image 3",
         "type": "image",
         "url": "/assets/images/test-img-3.jpg",
@@ -27,12 +27,22 @@
         "discipline": "graphic-design"
     },
     {
-        "id": 1,
+        "id": 3,
         "title": "Dancer - IDLES",
         "type": "yt",
         "url": "https://www.youtube.com/embed/A3ZZj5y6Qt4?si=x8uXlTWhooH6aKfK",
         "year": 2024,
         "description": "testing youtube video",
         "discipline":"3d-modelling"
+    },
+    {
+        "id": 4,
+        "title": "Missing Image Graphic",
+        "type": "image",
+        "url": "/assets/images/default.jpg",
+        "year": 2024,
+        "description": "The image is not missing. I designed this graphic.",
+        "discipline":"graphic-design",
+        "project": "This site"
     }
 ]

@@ -29,7 +29,7 @@ const Footer = () => {
                             <div className="list-item-indicator">&larr;</div>
                         </li >
                         <li className="list-item" aria-label="gallery">
-                            <a href="/gallery">gallery.</a>
+                            <a href="/projects/gallery">gallery.</a>
                             <div className="list-item-indicator">&larr;</div>
                         </li>
                         <li className="list-item" aria-label="games">

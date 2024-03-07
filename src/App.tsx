@@ -47,12 +47,16 @@ function App() {
           path='/'
           element={<Body><Home breakpoint={breakpoint} /></Body>}
         />
+        <Route
+          path='/projects/web-dev' 
+          element={<Body><Exhibit breakpoint={breakpoint}/></Body>}
+        />
         <Route 
-          path="/gallery"
+          path="/projects/gallery"
           element={<Body><Gallery breakpoint={breakpoint}/></Body>}
         />                
         <Route          
-          path="/gallery/:exhibitID"
+          path="/projects/:exhibitID"
           element={<Body><Exhibit breakpoint={breakpoint}/></ Body>} 
         />
         <Route          

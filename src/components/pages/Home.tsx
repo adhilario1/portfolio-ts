@@ -24,7 +24,7 @@ const Home = ({breakpoint}: Props) => {
                         I built this website to act as my portfolio. Please click one of the links below to learn more about me, or play some games! Or if you&apos;d just like to make a statement, sign the guestbook (because it&apos;s 1997, for some reason.)
                         <br />
                         <br />
-                        <div style={{display: 'inline'}}>If you&apos;d like to learn more about this website, <Link className="link-box" to="/gallery/web-dev"><div className='link-indicator'>[</div><div className='link-text'>click here.</div><div className='link-indicator'>]</div></Link></div>
+                        <div style={{display: 'inline'}}>If you&apos;d like to learn more about this website, <Link className="link-box" to="/projects/web-dev"><div className='link-indicator'>[</div><div className='link-text'>click here.</div><div className='link-indicator'>]</div></Link></div>
                     </p>
     
 

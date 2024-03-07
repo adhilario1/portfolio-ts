@@ -4,7 +4,7 @@
     color: antiquewhite/*#ffbf00*/;
     width: 100vw;
     font-family: 'Courier New', Courier, monospace;
-    border-top: 2pt double #ffbf00;
+    border-top: 3px double #ff8b00;
 
 }
 
@@ -32,7 +32,7 @@
 
 .list-item:hover {
     
-    background-color: #ffbf00;
+    background-color: #ff8b00;
     color: #101010;
 }
 
