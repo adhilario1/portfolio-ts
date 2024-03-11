@@ -39,8 +39,7 @@ const Modal = ({className, post, game, breakpoint}: Props) => {
         mobile = true;
     }
 
-    if (game) modalClassname += " game-modal"
-    console.log(breakpoint);
+    //if (game) modalClassname += " game-modal"
     
     function thumbnail(thumbnail: string | undefined) {
         return (
