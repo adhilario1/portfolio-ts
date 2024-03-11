@@ -131,10 +131,11 @@ const Gallery = ({breakpoint}: Props) => {
                     <div className='subheader'>
                         <div className='text'>
                             <h1>Gallery.</h1>
+                            <h2>{filter}</h2>
                         </div>
                         <div className='spacer' />
                         <select className='dropdown filter' value={filter} onChange={handleFilterChange}>
-                            <option value={""}>---</option>
+                            <option value={""}>All</option>
                             <option value={"3d-modelling"}>3D Modeling</option>
                             <option value={"graphic-design"}>Graphic Design</option>
                             <option value={"vid-prod"}>Video Production</option>
