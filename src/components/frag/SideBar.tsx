@@ -11,7 +11,7 @@ const linktree = [
     },
     {
         "label": "gallery",
-        "url": "/gallery"
+        "url": "/projects/gallery"
     },
     {
         "label": "games",
@@ -27,7 +27,7 @@ const linktree = [
     },
     {
         "label": "this site",
-        "url": "/gallery/web-dev"
+        "url": "/projects/web-dev"
     },
     {
         "label": "contact",
